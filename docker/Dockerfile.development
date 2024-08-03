@@ -1,0 +1,27 @@
+FROM python:3.12
+
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+# hadolint ignore=DL3008
+RUN apt-get update \
+  && apt-get --no-install-recommends -y install git gnupg2 ca-certificates curl pipx \
+  && pipx ensurepath \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists
+
+RUN curl -sSf https://rye.astral.sh/get | RYE_INSTALL_OPTION="--yes" bash \
+  && echo "source '$HOME/.rye/env'" >> ~/.bashrc \
+  && /root/.rye/shims/rye config --set-bool behavior.global-python=true \
+  && /root/.rye/shims/rye config --set-bool behavior.use-uv=true
+
+ENV RYE_HOME="/opt/rye"
+ENV PATH="$RYE_HOME/shims:$PATH"
+
+WORKDIR /workspaces/webnavix/
+
+COPY ./.python-version ./pyproject.toml ./requirements* ./
+RUN /root/.rye/shims/rye pin "$(cat ./.python-version)" && /root/.rye/shims/rye sync
+
+COPY ./ ./
+
+RUN if [ ! -d ./wl_data/ ]; then /root/.rye/shims/rye run python ./src/dataset.py; fi

@@ -1,0 +1,159 @@
+{
+  "commit-message-editor.tokens": [
+    {
+      "label": "Type",
+      "name": "type",
+      "type": "enum",
+      "description": "Type of changes.",
+      "combobox": true,
+      "options": [
+        {
+          "label": "feat: ✨",
+          "value": "feat: ✨",
+          "description": "Implementation of new features."
+        },
+        {
+          "label": "feat: 🎈",
+          "value": "feat: 🎈",
+          "description": "Repair of existing features."
+        },
+        {
+          "label": "feat: ⚰️",
+          "value": "feat: ⚰️",
+          "description": "Deletion of features."
+        },
+        {
+          "label": "fix: 🐛",
+          "value": "fix: 🐛",
+          "description": "Bug fixes."
+        },
+        {
+          "label": "fix: 🚑️",
+          "value": "fix: 🚑️",
+          "description": "Critical bug fixes or major changes."
+        },
+        {
+          "label": "doc: 📝",
+          "value": "doc: 📝",
+          "description": "Documentation changes."
+        },
+        {
+          "label": "typo: 🖋️",
+          "value": "typo: 🖋️",
+          "description": "Typography changes."
+        },
+        {
+          "label": "style: 💄",
+          "value": "style: 💄",
+          "description": "Style changes."
+        },
+        {
+          "label": "refactor: ♻️",
+          "value": "refactor: ♻️",
+          "description": "Code formatting or refactoring."
+        },
+        {
+          "label": "test: 🧪",
+          "value": "test: 🧪",
+          "description": "Test cases changes."
+        },
+        {
+          "label": "ci: 🦺",
+          "value": "ci: 🦺",
+          "description": "CI changes."
+        },
+        {
+          "label": "build: 📦️",
+          "value": "build: 📦️",
+          "description": "Build system or dependency changes."
+        },
+        {
+          "label": "container: 🐳",
+          "value": "container: 🐳",
+          "description": "The Dockerfile changes."
+        },
+        {
+          "label": "container: 🐙",
+          "value": "container: 🐙",
+          "description": "The docker-compose changes."
+        },
+        {
+          "label": "chore: 🔧",
+          "value": "chore: 🔧",
+          "description": "Configuration changes."
+        },
+        {
+          "label": "chore: 🔨",
+          "value": "chore: 🔨",
+          "description": "Development script changes."
+        },
+        {
+          "label": "chore: 🍱",
+          "value": "chore: 🍱",
+          "description": "Assets changes."
+        },
+        {
+          "label": "revert: ⏪️",
+          "value": "revert: ⏪️",
+          "description": "Reversion of changes."
+        },
+        {
+          "label": "wip: 🚧",
+          "value": "wip: 🚧",
+          "description": "Changes that will be squashed."
+        },
+        {
+          "label": "initial: 🎉",
+          "value": "initial: 🎉",
+          "description": "The first commit."
+        }
+      ]
+    },
+    {
+      "label": "Scope",
+      "name": "scope",
+      "type": "text",
+      "description": "Scope of changes.",
+      "prefix": " (",
+      "suffix": ")"
+    },
+    {
+      "label": "Short Description",
+      "name": "description",
+      "type": "text",
+      "description": "Commit summary.",
+      "prefix": " "
+    },
+    {
+      "label": "Body",
+      "name": "body",
+      "type": "text",
+      "description": "Detailed description of commit.",
+      "maxLines": 10,
+      "multiline": true,
+      "lines": 5
+    },
+    {
+      "label": "Footer",
+      "name": "footer",
+      "description": "Description of disruptive changes or signature.",
+      "type": "text",
+      "multiline": true
+    }
+  ],
+  "commit-message-editor.dynamicTemplate": ["{type}{scope}{description}", "", "{body}", "", "{footer}"],
+  "commit-message-editor.staticTemplate": ["label: emoji (scope) short-description", "", "body", "", "footer"],
+  "commit-message-editor.view.defaultView": "form",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.defaultInterpreterPath": "/opt/rye/shims/python",
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  }
+}

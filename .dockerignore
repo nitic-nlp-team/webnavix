@@ -1,0 +1,27 @@
+# cache
+**/__pycache__/
+**/.mypy_cache/
+**/.ruff_cache/
+**/*.egg-info/
+
+# dataset
+**/wl_data/
+
+# debug
+**/*log*
+
+# deliverable
+**/build/
+**/dist/
+**/out/
+
+# dependency
+**/.venv/
+
+# env file
+**/.env*
+!**/.env.example
+
+# misc
+**/.DS_Store
+**/*.pem
