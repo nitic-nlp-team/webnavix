@@ -1,0 +1,13 @@
+services:
+  app:
+    container_name: webnavix
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile.development
+    volumes:
+      - type: bind
+        source: ../
+        target: /workspaces/webnavix/
+    environment:
+      PROJECT_DIR: /workspaces/webnavix/
+    tty: true

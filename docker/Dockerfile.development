@@ -1,0 +1,26 @@
+FROM python:3.12
+
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+# hadolint ignore=DL3008
+RUN apt-get update \
+  && apt-get --no-install-recommends -y install git gnupg2 ca-certificates curl pipx \
+  && pipx ensurepath \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists
+
+RUN curl -sSf https://rye.astral.sh/get | RYE_INSTALL_OPTION="--yes" bash \
+  && echo "source '$HOME/.rye/env'" >> ~/.bashrc \
+  && /root/.rye/shims/rye config --set-bool behavior.global-python=true \
+  && /root/.rye/shims/rye config --set-bool behavior.use-uv=true
+
+RUN RYE_UV_HOME=$(find "$HOME/.rye/uv" -type d -regex '.*/[0-9]+\.[0-9]+\.[0-9]+$') \
+  && echo "export PATH=\"$RYE_UV_HOME:\$PATH\"" >> ~/.bashrc
+
+WORKDIR /workspaces/webnavix/
+
+COPY ./.python-version ./pyproject.toml ./requirements* ./
+# hadolint ignore=SC1091
+RUN "$HOME/.rye/shims/rye" pin "$(cat ./.python-version)" && "$HOME/.rye/shims/rye" sync && source ./.venv/bin/activate
+
+COPY ./ ./
