@@ -1,0 +1,20 @@
+{
+  "name": "webnavix",
+  "workspaceFolder": "/workspaces/webnavix/",
+  "dockerComposeFile": ["../docker/docker-compose.development.yaml"],
+  "service": "app",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "adam-bender.commit-message-editor",
+        "charliermarsh.ruff",
+        "eamodio.gitlens",
+        "EditorConfig.EditorConfig",
+        "esbenp.prettier-vscode",
+        "ms-python.python",
+        "tamasfe.even-better-toml",
+        "VisualStudioExptTeam.vscodeintellicode"
+      ]
+    }
+  }
+}

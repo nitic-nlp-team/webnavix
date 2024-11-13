@@ -1,0 +1,48 @@
+target-version = "py312"
+indent-width = 4
+line-length = 120
+exclude = [
+  "__pycache__",
+  ".cache",
+  ".mypy_cache",
+  ".ruff_cache",
+  ".venv",
+  "*.egg-info",
+  "build",
+  "checkpoints",
+  "dist",
+  "out",
+  "results",
+  "wandb",
+  "wl_data",
+  "*log*",
+]
+
+[format]
+indent-style = "space"
+line-ending = "auto"
+quote-style = "double"
+skip-magic-trailing-comma = false
+
+
+[lint]
+select = ["ALL"]
+fixable = ["ALL"]
+ignore = [
+  "ANN001",
+  "EM101",
+  "ERA001",
+  "FBT001",
+  "FBT002",
+  "RET504",
+  "TRY002",
+  "TRY003",
+]
+
+[lint.extend-per-file-ignores]
+"__init__.py" = ["D1", "F403"]
+"build.py" = ["D1"]
+"dataset.py" = ["D1"]
+"eval.py" = ["D1"]
+"merge.py" = ["D1"]
+"train.py" = ["D1"]
