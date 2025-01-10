@@ -1,0 +1,19 @@
+name: app test
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup rye
+        uses: eifinger/setup-rye@v4
+
+      - name: install dependencies
+        run: rye sync
+
+      - name: check
+        run: rye check

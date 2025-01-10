@@ -1,0 +1,101 @@
+base_model: nitic-nlp-team/webnavix-llama-base
+gate_mode: hidden
+dtype: bfloat16
+experts_per_token: 2
+experts:
+  - source_model: /content/drive/MyDrive/Projects/nitic-nlp-team/webnavix/checkpoints/webnavix/nitic-nlp-team/webnavix-llama-ai-tools/checkpoint-500/
+    positive_prompts:
+      - "Could you please open brandmark?"
+      - "Please help me to create a logo for my brand."
+      - "Change the font size - 2.5, Light Peach color & let the font style be as it is."
+      - "Open Quillbot website."
+      - 'Can you please open the website "Hugging face" stable diffusion?'
+      - "Open bard and login with below credentials: \n\tID - webtasks.navigator@gmail.com \n\tPassword - KEG24qweUHij%^"
+      - "Ask bard to summarize the below news from BBC news \\n\\t\\n\\t- Modi in US: Elon Musk says Tesla to come to India 'as soon as possible'"
+      - 'I want to create a mood board on "African Savanna".'
+      - "Open copy.ai website."
+      - "Got any creative ideas for a 10-year old's birthday?"
+  - source_model: /content/drive/MyDrive/Projects/nitic-nlp-team/webnavix/checkpoints/webnavix/nitic-nlp-team/webnavix-llama-booking/checkpoint-1050/
+    positive_prompts:
+      - "Open momondo.in and login with google using the below details: \\n\\t\\n\\tId: webtasks.navigator@gmail.com \\n\\tPassword: KEG24qweUHij%^"
+      - "Great, How many people will be in your party?"
+      - "Open Cheaptickets website."
+      - "Send me cruise options from Canada/New England for 1st July to 8th July."
+      - "I am searching for one-way flights from Azerbaijan to Turkey."
+      - "Date of journey: 30th June. Number of travelers: 4"
+      - "It will be picked up in Toronto (and vicinity), Ontario, Canada on June 8th at 10:00 AM. Drop-off will take place at 10 AM on 10th June."
+      - "Please open Vrbo website."
+      - "In which location?"
+      - "What will be the price for the 1st option?"
+  - source_model: /content/drive/MyDrive/Projects/nitic-nlp-team/webnavix/checkpoints/webnavix/nitic-nlp-team/webnavix-llama-composing/checkpoint-500/
+    positive_prompts:
+      - "Please open Wattpad."
+      - "Create a new story"
+      - "Below in the text box, write: \\n\\t  \\n\\tWhispers in the wind, \\n\\tA dance of words unseen, \\n\\tEmotions unfurling, \\n\\tIn the spaces between. \\n\\t  \\n\\tLove's tender embrace, \\n\\tOr heartache's bitter sting, \\n\\tIn ...\") Please select the best action using the correct format, do not provide any other information or explanation."
+      - 'Click on "Publish" and tick the "*You must complete this field to proceed."'
+      - 'Open a new Google Docs document and create a with the bulleted list with the title "Healthy Eating Habits."'
+      - "Add the following bullet points to the list: \\n\\t\\n\\tPrioritize tasks based on importance and urgency. \\n\\t\\n\\tBreak larger tasks into smaller, manageable chunks. \\n\\t\\n\\tSet realistic goals and deadlines. \\n\\t\\n..."
+      - 'Select "Untitled Part 1" paste this "The Enchanted Gears" and click on "Save."'
+      - "I want to create a blog in a few words on Beginner's Guide to Meditation: Finding Inner Peace."
+      - 'Let''s add a subtitle to the document stating, "Enhancing Collaboration and Productivity."'
+      - "For the title, let's use Georgia with a font size of 28, and for the subtitle, let's use Tahoma with a font size of 18."
+  - source_model: /content/drive/MyDrive/Projects/nitic-nlp-team/webnavix/checkpoints/webnavix/nitic-nlp-team/webnavix-llama-information-lookup/checkpoint-500/
+    positive_prompts:
+      - "Please open the HowStuffWorks website."
+      - "Search for the article titled 'How to Prepare for a Hurricane.'"
+      - "Name the contributing writers in this article."
+      - "What is the Pythagorean theorem?"
+      - "Search 'Trading for Beginners'."
+      - "Show me some articles"
+      - 'Can you open the website of the Central Intelligence Agency? [00:34] Please go to country "China". [01:06] What is the population of China?'
+      - "Could you tell me the major rivers in China, listed by length in kilometers?"
+      - 'Go to the "New on Britannica " section. [00:47] Open the article on "Sister Rosetta Tharpe." [01:01] Who was Sister Rosetta Tharpe? [01:39] Whose daughter was Sister Rosetta Tharpe? [02:11] At what age did Sister Rosetta Tharpe start singing and playing the guitar?'
+      - "When did she officially join Lucky Millinder's swing band?"
+  - source_model: /content/drive/MyDrive/Projects/nitic-nlp-team/webnavix/checkpoints/webnavix/nitic-nlp-team/webnavix-llama-shopping/checkpoint-400/
+    positive_prompts:
+      - "Can you please open the Grubhub website?"
+      - "Can you show me some of their Neighborhood Gems options?"
+      - "I am looking for DSLR camera."
+      - "Okay. May I know the price range?"
+      - "Can you find a Samsung 5G smartphone?"
+      - "My budget is between Rs25000 to 30000."
+      - "Select Peach colour and what is the price?"
+      - "What will be the delivery date for the last one if I purchase it today?"
+      - "Please open the eBay website."
+      - "Look for 3 width and 60 gauge."
+  - source_model: /content/drive/MyDrive/Projects/nitic-nlp-team/webnavix/checkpoints/webnavix/nitic-nlp-team/webnavix-llama-social-interaction/checkpoint-150/
+    positive_prompts:
+      - "Open Discourse Org & sign in with google using the below credentials: \\n\\tID - webtasks.navigator@gmail.com \\n\\tPassword - KEG24qweUHij%^"
+      - "Open “Gaming” categories and select 'new topic'."
+      - "Sure, for the title add: \\n\\tBest free games to-play on PC"
+      - "For description add the text below: \\n\\tLooking for some fantastic free games to enjoy on your PC? Look no further! Here’s a list of the best free games that offer incredible experiences without brea..."
+      - "Please create the Topic."
+      - "Browse games & send me some recommended Games"
+      - "How many followers does it have?"
+      - "Go to videos and open the topic “Recommend a great YouTube video”."
+      - "Add a server on discord then select “Create my own” and Please name it as “pina colada's server”."
+      - "Now please go to the “Mirage” server and create an event."
+  - source_model: /content/drive/MyDrive/Projects/nitic-nlp-team/webnavix/checkpoints/webnavix/nitic-nlp-team/webnavix-llama-summarizing/checkpoint-450/
+    positive_prompts:
+      - "Open the Second one and please summarize this article."
+      - 'Please open the New Yorker website. [01:04] Click on "Goings On" [01:24] Open the link to the first article [01:56] Please summarize this article briefly.'
+      - "Please summarize the first two paragraphs."
+      - "Search Jalapeno Falafels Recipe [00:57] Please summarize this article name “Jalapeno Falafels Recipe”"
+      - "Summarize the above article in few lines."
+      - "Open the 2nd article and summarize the first 2 paragraphs of the article."
+      - "Show me few articles and summarize for me."
+      - "Open the Third one and please summarize this article."
+      - "Please summarize the first two paragraphs."
+      - "Provide me with a list of the articles."
+  - source_model: /content/drive/MyDrive/Projects/nitic-nlp-team/webnavix/checkpoints/webnavix/nitic-nlp-team/webnavix-llama-task-management/checkpoint-450/
+    positive_prompts:
+      - "Open the Trello website and please search for “Annotations”."
+      - "Go to “Gmail” and Add “Template”. Can you tell me the title name? Email Empowerment."
+      - "Please Select Notification as watching."
+      - "Create a Workspace in Trello."
+      - "Create a new section as \"Do laundry\" & add the below tasks: \\n\\t- Sort and wash clothes. \\n\\t- Dry and fold clean laundry. \\n\\t- Iron or steam clothes if necessary. \\n\\t- Put away clean clothes in their de..."
+      - "What will be their Due date? This weekend."
+      - "Now, please add the following tasks to the below sections:\\n\\tPlanning\\n\\tTasks: \\n\\t\\n\\t- Research home renovation ideas online \\n\\t\\n\\t- Create a mood board for design inspiration\\n\\t2. Budgeting \\n\\t\\n\\tTasks: \\n\\t..."
+      - "Do you want any of the tasks to be set as a priority?"
+      - "Let's open the Todoist website."
+      - "Could you provide me with the task name and description?"

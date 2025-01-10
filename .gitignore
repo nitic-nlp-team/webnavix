@@ -1,0 +1,33 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# cache
+__pycache__/
+.cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# dataset
+wl_data
+
+# debug
+*log*
+wandb/
+
+# deliverable
+build/
+dist/
+out/
+results/
+checkpoints
+
+# dependency
+.venv/
+
+# env file
+.env*
+!.env.example
+
+# misc
+.DS_Store
+*.pem

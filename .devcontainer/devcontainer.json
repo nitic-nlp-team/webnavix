@@ -1,0 +1,20 @@
+{
+  "name": "webnavix",
+  "workspaceFolder": "/workspaces/webnavix/",
+  "dockerComposeFile": ["../docker/docker-compose.development.yaml"],
+  "service": "app",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "charliermarsh.ruff",
+        "editorconfig.editorconfig",
+        "esbenp.prettier-vscode",
+        "ms-python.python",
+        "myriad-dreamin.tinymist",
+        "orangex4.vscode-typst-sync",
+        "tamasfe.even-better-toml",
+        "visualstudioexptteam.vscodeintellicode"
+      ]
+    }
+  }
+}

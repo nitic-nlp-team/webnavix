@@ -1,0 +1,37 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "python.analysis.exclude": [
+    "**/__pycache__/",
+    "**/.cache/",
+    "**/.mypy_cache/",
+    "**/.ruff_cache/",
+    "**/.venv/",
+    "**/*.egg-info/",
+    "**/build/",
+    "**/checkpoints/",
+    "**/dist/",
+    "**/out/",
+    "**/results/",
+    "**/wandb/",
+    "**/wl_data/",
+    "**/*log/*"
+  ],
+  "python.analysis.typeCheckingMode": "basic",
+  "python.defaultInterpreterPath": "/opt/rye/shims/python",
+  "tinymist.exportPdf": "onDocumentHasTitle",
+  "tinymist.fontPaths": ["./paper/font/"],
+  "tinymist.formatterMode": "typstyle",
+  "tinymist.typingContinueCommentsOnNewline": false,
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[typst]": {
+    "editor.defaultFormatter": "myriad-dreamin.tinymist"
+  }
+}

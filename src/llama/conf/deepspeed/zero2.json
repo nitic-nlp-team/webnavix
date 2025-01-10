@@ -1,0 +1,14 @@
+{
+  "train_batch_size": "auto",
+  "gradient_accumulation_steps": "auto",
+  "optimizer": "auto",
+  "scheduler": "auto",
+  "bf16": "auto",
+  "zero_optimization": {
+    "stage": 2,
+    "contiguous_gradients": true,
+    "offload_optimizer": {
+      "device": "cpu"
+    }
+  }
+}
