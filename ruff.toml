@@ -41,6 +41,7 @@ ignore = [
 
 [lint.extend-per-file-ignores]
 "__init__.py" = ["D1", "F403"]
+"analysis.py" = ["D1"]
 "build.py" = ["D1"]
 "dataset.py" = ["D1"]
 "eval.py" = ["D1"]
