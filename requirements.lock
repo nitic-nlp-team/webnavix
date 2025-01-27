@@ -38,6 +38,10 @@ click==8.1.7
     # via wandb
 colorama==0.4.6
     # via sacrebleu
+contourpy==1.3.1
+    # via matplotlib
+cycler==0.12.1
+    # via matplotlib
 datasets==2.19.2
     # via trl
     # via webnavix
@@ -55,6 +59,8 @@ filelock==3.15.4
     # via huggingface-hub
     # via torch
     # via transformers
+fonttools==4.55.3
+    # via matplotlib
 frozenlist==1.4.1
     # via aiohttp
     # via aiosignal
@@ -83,6 +89,8 @@ idna==3.7
     # via yarl
 jinja2==3.1.4
     # via torch
+kiwisolver==1.4.8
+    # via matplotlib
 lxml==5.3.0
     # via sacrebleu
     # via webnavix
@@ -90,6 +98,8 @@ markdown-it-py==3.0.0
     # via rich
 markupsafe==2.1.5
     # via jinja2
+matplotlib==3.10.0
+    # via webnavix
 mdurl==0.1.2
     # via markdown-it-py
 mergoo==0.0.10
@@ -107,8 +117,10 @@ ninja==1.11.1.1
     # via deepspeed
 numpy==1.26.4
     # via accelerate
+    # via contourpy
     # via datasets
     # via deepspeed
+    # via matplotlib
     # via mergoo
     # via pandas
     # via peft
@@ -127,6 +139,7 @@ packaging==24.1
     # via deepspeed
     # via huggingface-hub
     # via hydra-core
+    # via matplotlib
     # via peft
     # via transformers
 pandas==2.2.2
@@ -135,6 +148,8 @@ pandas==2.2.2
 peft==0.12.0
     # via mergoo
     # via webnavix
+pillow==11.1.0
+    # via matplotlib
 platformdirs==4.2.2
     # via wandb
 portalocker==2.10.1
@@ -159,7 +174,10 @@ pydantic-core==2.23.4
     # via pydantic
 pygments==2.18.0
     # via rich
+pyparsing==3.2.1
+    # via matplotlib
 python-dateutil==2.9.0.post0
+    # via matplotlib
     # via pandas
 python-dotenv==1.0.1
     # via webnavix
